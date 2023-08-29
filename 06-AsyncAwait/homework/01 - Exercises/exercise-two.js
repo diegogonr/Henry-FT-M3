@@ -30,6 +30,14 @@ async function problemA() {
 
   // async await version
   // Tu código acá:
+
+ await exerciseUtils.promisifiedReadFile("poem-two/stanza-01.txt")
+ .then(response=>exerciseUtils.blue(response))
+ await exerciseUtils.promisifiedReadFile("poem-two/stanza-02.txt")
+ .then(response=>exerciseUtils.blue(response))
+
+
+  console.log("done")
 }
 
 async function problemB() {
@@ -46,6 +54,13 @@ async function problemB() {
 
   // async await version
   // Tu código acá:
+  for (const filename of filenames) {
+    await exerciseUtils.promisifiedReadFile(filename)
+     .then(response=> exerciseUtils.blue(response)
+    )
+}
+
+
 }
 
 async function problemC() {
@@ -62,6 +77,14 @@ async function problemC() {
 
   // async await version
   // Tu código acá:
+
+  for (const filename of filenames) {
+    await exerciseUtils.promisifiedReadFile(filename)
+    .then(response=>      exerciseUtils.blue(response))
+
+  }
+
+  console.log("done")
 }
 
 async function problemD() {
@@ -81,4 +104,14 @@ async function problemD() {
 
   // async await version
   // Tu código acá:
+
+  for (const filename of filenames) {
+    await exerciseUtils.promisifiedReadFile(filename)
+    .then(response=>      exerciseUtils.blue(response))
+    .catch(err =>exerciseUtils.magenta(new Error(err)) )
+  }
+
+  console.log("done")
+
+
 }
