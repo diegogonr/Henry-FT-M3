@@ -61,7 +61,7 @@ rejected1       //rechazando
 )   
 .then (
     (value)=> console.log('caso 6: ', value),
-    (error) => console.log('error HANDLER: ',error)
+    (error) => console.log('caso 6: error HANDLER: ',error)
     )
 
 
@@ -75,4 +75,4 @@ fulfilled1
     (value)=> console.log('success HANDLER 2: ', value),
     (error) => console.log('error HANDLER 2: ',error)
 )
-.catch (error => console.log('catch: ', error))      //catch se ignora porque el error ya se resolvió
+.catch (error => console.log('catch: ', error))      //catch se ignora porque no hay error
